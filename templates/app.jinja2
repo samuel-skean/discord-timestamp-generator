@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+            <title>Discord Timestamp Generator</title>
+            <link rel="stylesheet" href="/index.css"></link>
+    </head>
+    <body>
+        <h1>Discord Timestamp Generator</h1>
+        <form class="generator-form">
+            <span class="generator-row">
+                <label for="time">Time</label>
+                <input className="time-input" id="time" type="datetime-local" value="{{ defaultTime }}" />
+            </span>
+            <span class="generator-row">
+                <label for="timestamp-type">Type:</label>
+                <select className="timestamp-type" id="timestamp-type" value="{{ defaultTarget }}">
+                    <option value="short-time">Short Time</option>
+                    <option value="long-time">Long Time</option>
+                    <option value="short-date">Short Date</option>
+                    <option value="long-date">Long Date</option>
+                    <option value="long-date-with-short-time">Long Date with Short Time</option>
+                    <option value="long-date-with-day-of-week-and-short-time">Long Date with Day of Week and Short Time</option>
+                    <option value="relative">Relative</option>
+                </select>
+            </span>
+            <span class="generator-row">
+                <span>Output</span><span>TODO</span>
+            </span>
+            <span class="generator-row">
+                <span>TODO</span><button>Copy to Clipboard</button>
+            </span>
+            <button action="submit">Update Event</button>
+        </form>
+    </body>
+</html>
