@@ -1,0 +1,23 @@
+{
+  "name": "skean-discord-timestamp-generator",
+  "version": "0.1.0",
+  "description": "",
+  "homepage": "https://github.com/samuel-skean/discord-timestamp-generator#readme",
+  "bugs": {
+    "url": "https://github.com/samuel-skean/discord-timestamp-generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuel-skean/discord-timestamp-generator.git"
+  },
+  "license": "MIT",
+  "author": "Samuel Skean",
+  "type": "esm",
+  "main": "index.js",
+  "scripts": {
+    "test": "cargo test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.10"
+  }
+}
