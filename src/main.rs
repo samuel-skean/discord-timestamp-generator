@@ -1,6 +1,6 @@
 mod frontend;
 
-use axum::{Router, routing::*};
+use axum::{Router, response::Redirect, routing::*};
 use frontend::*;
 use tokio::net::TcpListener;
 use tower_http::services::ServeDir;
@@ -8,6 +8,7 @@ use tower_http::services::ServeDir;
 #[tokio::main]
 async fn main() {
     let app = Router::new()
+        .route("/", get(|| async { Redirect::permanent("/app") }))
         .route("/app", get(app))
         .fallback_service(ServeDir::new("assets"));
 

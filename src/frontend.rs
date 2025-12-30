@@ -1,6 +1,7 @@
 use std::sync::LazyLock;
 
 use axum::{http::StatusCode, response::Html};
+use chrono::Local;
 use minijinja::{Environment, context, path_loader};
 use minijinja_autoreload::AutoReloader;
 
@@ -25,7 +26,9 @@ pub async fn app() -> (StatusCode, Html<String>) {
         );
     };
 
-    let Ok(rendered) = template.render(context!(name => "Samuel")) else {
+    let Ok(rendered) =
+        template.render(context!(defaultTime => Local::now().format("%Y-%m-%dT%H:%M").to_string()))
+    else {
         return (
             StatusCode::INTERNAL_SERVER_ERROR,
             Html(String::from("Internal error rendering template")),
