@@ -19,7 +19,7 @@ pub async fn app() -> (StatusCode, Html<String>) {
     let env = RELOADER
         .acquire_env()
         .expect("Unable to acquire minijinja environment.");
-    let Ok(template) = env.get_template("app.jinja2") else {
+    let Ok(template) = env.get_template("app.html.jinja2") else {
         return (
             StatusCode::INTERNAL_SERVER_ERROR,
             Html(String::from("Internal error getting template")),
