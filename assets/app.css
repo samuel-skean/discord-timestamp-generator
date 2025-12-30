@@ -23,7 +23,7 @@ button {
 }
 
 .form-row label {
-    width: 80px;
+    width: 140px;
     flex-shrink: 0;
     margin-right: 20px;
 }
@@ -53,4 +53,8 @@ button {
     .form-row span {
         width: 100%;
     }
+}
+
+.output-display {
+    padding: 5px;
 }
